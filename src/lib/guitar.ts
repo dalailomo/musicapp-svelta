@@ -1,6 +1,5 @@
 import {createScaleFromPattern, generateNoteArray} from "./core";
 
-declare type Note = { note: string, degree: number };
 export const createFretboardMatrix = (root: string, pattern: string[], steps: number, tuning: number[]): Note[][] => {
     const result: Note[][] = [];
 

@@ -2,6 +2,7 @@
 	import {createFretboardMatrix} from "$lib/guitar.ts";
 	import {NOTE_TAG, SCALE_PATTERN_STEP} from "$lib/core.ts";
 	import ScaleSelector from "../components/ScaleSelector.svelte";
+	import Fretboard from "../components/Fretboard.svelte";
 
 	let root = NOTE_TAG[0];
 	let scale = [SCALE_PATTERN_STEP.whole, SCALE_PATTERN_STEP.whole, SCALE_PATTERN_STEP.half, SCALE_PATTERN_STEP.whole, SCALE_PATTERN_STEP.whole, SCALE_PATTERN_STEP.whole, SCALE_PATTERN_STEP.half];
@@ -12,21 +13,17 @@
 		root = event.detail.root;
 	}
 
-	$: fretboard = createFretboardMatrix(root, scale, steps, [4, 9, 2, 7, 11, 4]).reverse();
+	function onFretboardLengthChange(event: CustomEvent) {
+		steps = event.detail;
+	}
+
+	$: items = createFretboardMatrix(root, scale, steps, [4, 9, 2, 7, 11, 4]).reverse();
 </script>
 
 <div>
 	<ScaleSelector root={root} scale={scale} on:input={onScaleChange} />
 	<br />
-	<input type="number" bind:value={steps} />
+	<Fretboard steps={steps} items={items} on:input={onFretboardLengthChange} />
 </div>
 
-<div>
-	{#each fretboard as slotLine}
-		<pre>
-			{#each slotLine as slot}
-				{slot.note}:{slot.degree}&nbsp;
-			{/each}
-		</pre>
-	{/each}
-</div>
+
