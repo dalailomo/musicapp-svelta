@@ -1,6 +1,6 @@
 <script>
-	import {createFretboardMatrix} from "../guitar.ts";
-	import {NOTE_TAG, SCALE_PATTERN_STEP} from "../core.ts";
+	import {createFretboardMatrix} from "$lib/guitar.ts";
+	import {NOTE_TAG, SCALE_PATTERN_STEP} from "$lib/core.ts";
 
 	let root = NOTE_TAG[0];
 	let scale = [SCALE_PATTERN_STEP.whole, SCALE_PATTERN_STEP.whole, SCALE_PATTERN_STEP.half, SCALE_PATTERN_STEP.whole, SCALE_PATTERN_STEP.whole, SCALE_PATTERN_STEP.whole, SCALE_PATTERN_STEP.half];
