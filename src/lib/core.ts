@@ -1,23 +1,4 @@
-export const SCALE_PATTERN_STEP = {
-    whole: "W",
-    half: "H",
-    augmented: "+"
-}
-
-export const NOTE_TAG = [
-    'C',    // 0
-    'C#',   // 1
-    'D',    // 2
-    'D#',   // 3
-    'E',    // 4
-    'F',    // 5
-    'F#',   // 6
-    'G',    // 7
-    'G#',   // 8
-    'A',    // 9
-    'A#',   // 10
-    'B',    // 11
-];
+import {NOTE_TAG, SCALE_PATTERN_STEP as SP} from "./consts";
 
 export const createScaleFromPattern = (scalePattern: string[], baseNote: string): string[] => {
     let currentStep = NOTE_TAG.indexOf(baseNote);
@@ -25,18 +6,29 @@ export const createScaleFromPattern = (scalePattern: string[], baseNote: string)
     result.push(NOTE_TAG[currentStep]);
 
     for (const scalePatternItem of scalePattern) {
-        if (scalePatternItem === SCALE_PATTERN_STEP.whole) {
+        if (scalePatternItem === SP.W) {
             currentStep++;
-        } else if (scalePatternItem === SCALE_PATTERN_STEP.augmented) {
+        } else if (scalePatternItem === SP.WH) {
+            currentStep++;
+            currentStep++;
+        } else if (scalePatternItem === SP.WW) {
+            currentStep++;
             currentStep++;
             currentStep++;
         }
+        else if (scalePatternItem === SP.WWH) {
+            currentStep++;
+            currentStep++;
+            currentStep++;
+            currentStep++;
+        }
+
+        currentStep++;
 
         if (currentStep >= NOTE_TAG.length) {
             currentStep = currentStep - (NOTE_TAG.length);
         }
 
-        currentStep++;
         result.push(NOTE_TAG[currentStep]);
     }
 

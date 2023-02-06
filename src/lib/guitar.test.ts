@@ -1,17 +1,17 @@
 import {describe, test, expect} from 'vitest';
-import {NOTE_TAG, SCALE_PATTERN_STEP} from "./core";
+import {NOTE_TAG, SCALE_PATTERN_STEP as SP} from "./consts";
 import {createFretboardMatrix} from "./guitar";
 
 // 'W', 'W', 'H', 'W', 'W', 'W', 'H' major scale
 const root = NOTE_TAG[0]; // C major scale
 const pattern = [
-    SCALE_PATTERN_STEP.whole,
-    SCALE_PATTERN_STEP.whole,
-    SCALE_PATTERN_STEP.half,
-    SCALE_PATTERN_STEP.whole,
-    SCALE_PATTERN_STEP.whole,
-    SCALE_PATTERN_STEP.whole,
-    SCALE_PATTERN_STEP.half
+    SP.W,
+    SP.W,
+    SP.H,
+    SP.W,
+    SP.W,
+    SP.W,
+    SP.H
 ];
 
 const tuning = [

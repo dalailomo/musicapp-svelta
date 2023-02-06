@@ -1,7 +1,8 @@
 import {describe, test, expect} from 'vitest';
-import {createScaleFromPattern, generateNoteArray, NOTE_TAG, SCALE_PATTERN_STEP} from "./core";
+import {createScaleFromPattern, generateNoteArray} from "./core";
+import {NOTE_TAG, SCALE_PATTERN_STEP as SP} from "./consts";
 
-const pattern = [SCALE_PATTERN_STEP.whole, SCALE_PATTERN_STEP.half, SCALE_PATTERN_STEP.whole, SCALE_PATTERN_STEP.augmented];
+const pattern = [SP.W, SP.H, SP.W, SP.WH, SP.WW, SP.WWH];
 
 describe('Core functions', () => {
     describe("Create a scale from a given pattern", () => {
@@ -11,7 +12,7 @@ describe('Core functions', () => {
                 {
                     pattern,
                     baseNote: NOTE_TAG[0],
-                    expectedScale: [NOTE_TAG[0], NOTE_TAG[2], NOTE_TAG[3], NOTE_TAG[5], NOTE_TAG[8]]
+                    expectedScale: [NOTE_TAG[0], NOTE_TAG[2], NOTE_TAG[3], NOTE_TAG[5], NOTE_TAG[8], NOTE_TAG[0], NOTE_TAG[5]]
                 }
             ],
             [
@@ -19,7 +20,7 @@ describe('Core functions', () => {
                 {
                     pattern,
                     baseNote: NOTE_TAG[8],
-                    expectedScale: [NOTE_TAG[8], NOTE_TAG[10], NOTE_TAG[11], NOTE_TAG[1], NOTE_TAG[4]]
+                    expectedScale: [NOTE_TAG[8], NOTE_TAG[10], NOTE_TAG[11], NOTE_TAG[1], NOTE_TAG[4], NOTE_TAG[8], NOTE_TAG[1]]
                 }
             ]
         ])("%s", (_, {pattern, baseNote, expectedScale}) => {
