@@ -1,8 +1,8 @@
 <script lang="ts">
     import {createFretboardMatrix} from "$lib/guitar";
     import {SCALE, NOTE_TAG} from "$lib/consts";
-    import ScaleSelector from "../components/ScaleSelector.svelte";
-    import Fretboard from "../components/Fretboard.svelte";
+    import ScaleSelector from "./Guitar/ScaleSelector.svelte";
+    import Fretboard from "./Guitar/Fretboard.svelte";
 
     let root = NOTE_TAG[0];
     let scale = SCALE['major'];
