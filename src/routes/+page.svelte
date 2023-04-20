@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Guitar from "../components/Guitar.svelte";
+	import Guitar from '../components/Guitar.svelte';
 </script>
 
 <div>
@@ -7,5 +7,3 @@
 	<br />
 	<Guitar />
 </div>
-
-

@@ -1,1 +1,1 @@
-declare type Note = { note: string, degree: number };
+declare type Note = { note: string; degree: number };

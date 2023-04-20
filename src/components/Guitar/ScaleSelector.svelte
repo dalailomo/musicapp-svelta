@@ -1,37 +1,37 @@
 <script lang="ts">
-    import {createEventDispatcher} from 'svelte';
-    import {SCALE} from "$lib/consts";
+	import { createEventDispatcher } from 'svelte';
+	import { SCALE } from '$lib/consts';
 
-    export let scale: string[];
-    export let root: string;
+	export let scale: string[];
+	export let root: string;
 
-    const dispatch = createEventDispatcher();
-    const scaleList: string[] = Object.keys(SCALE);
-    let selected: string = Object.keys(SCALE)[1];
+	const dispatch = createEventDispatcher();
+	const scaleList: string[] = Object.keys(SCALE);
+	let selected: string = Object.keys(SCALE)[1];
 
-    function buildOutput(param) {
-        return { scale: param.scale, root: param.root };
-    }
-
-    function onRootInput(e: Event) {
-        dispatch('input', buildOutput({ scale, root: (e.target as HTMLInputElement).value }) );
-    }
-
-    function onChangeScale(e: Event) {
-        dispatch('input', buildOutput({ scale: SCALE[(e.target as HTMLInputElement).value], root }));
+	function buildOutput(param) {
+		return { scale: param.scale, root: param.root };
 	}
 
-    function onModeChange(method: 'pop' | 'shift') {
-        const s = [...scale];
-        const e = s[method]();
-        scale = method === 'pop' ? [ e, ...s ] : [ ...s, e ];
-        dispatch('input', buildOutput({ scale, root }));
+	function onRootInput(e: Event) {
+		dispatch('input', buildOutput({ scale, root: (e.target as HTMLInputElement).value }));
+	}
+
+	function onChangeScale(e: Event) {
+		dispatch('input', buildOutput({ scale: SCALE[(e.target as HTMLInputElement).value], root }));
+	}
+
+	function onModeChange(method: 'pop' | 'shift') {
+		const s = [...scale];
+		const e = s[method]();
+		scale = method === 'pop' ? [e, ...s] : [...s, e];
+		dispatch('input', buildOutput({ scale, root }));
 	}
 </script>
 
 <input type="text" on:input={onRootInput} bind:value={root} />
 
-<select bind:value={selected} on:change="{onChangeScale}">
+<select bind:value={selected} on:change={onChangeScale}>
 	{#each scaleList as scaleName}
 		<option value={scaleName}>
 			{scaleName}
