@@ -3,7 +3,7 @@
 
 	const dispatch = createEventDispatcher();
 
-	export let items: Note[][];
+	export let items: NoteMeta[][];
 	export let steps: number;
 
 	function onInput(e: Event) {

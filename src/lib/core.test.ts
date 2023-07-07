@@ -1,8 +1,8 @@
 import { describe, test, expect } from 'vitest';
 import { createScaleFromPattern, generateNoteArray } from './core';
-import { NOTE_TAG, SCALE_PATTERN_STEP as SP } from './consts';
+import { NOTES } from './consts';
 
-const pattern = [SP.W, SP.H, SP.W, SP.WH, SP.WW, SP.WWH];
+const pattern: ScalePatternStep[] = ['W', 'H', 'W', '3H', '2W', '5H'];
 
 describe('Core functions', () => {
 	describe('Create a scale from a given pattern', () => {
@@ -11,15 +11,15 @@ describe('Core functions', () => {
 				'Starting from 0',
 				{
 					pattern,
-					baseNote: NOTE_TAG[0],
+					baseNote: NOTES[0],
 					expectedScale: [
-						NOTE_TAG[0],
-						NOTE_TAG[2],
-						NOTE_TAG[3],
-						NOTE_TAG[5],
-						NOTE_TAG[8],
-						NOTE_TAG[0],
-						NOTE_TAG[5]
+						NOTES[0],
+						NOTES[2],
+						NOTES[3],
+						NOTES[5],
+						NOTES[8],
+						NOTES[0],
+						NOTES[5]
 					]
 				}
 			],
@@ -27,15 +27,15 @@ describe('Core functions', () => {
 				'Reaching the end of the notes, comes back to the beginning',
 				{
 					pattern,
-					baseNote: NOTE_TAG[8],
+					baseNote: NOTES[8],
 					expectedScale: [
-						NOTE_TAG[8],
-						NOTE_TAG[10],
-						NOTE_TAG[11],
-						NOTE_TAG[1],
-						NOTE_TAG[4],
-						NOTE_TAG[8],
-						NOTE_TAG[1]
+						NOTES[8],
+						NOTES[10],
+						NOTES[11],
+						NOTES[1],
+						NOTES[4],
+						NOTES[8],
+						NOTES[1]
 					]
 				}
 			]
@@ -48,7 +48,7 @@ describe('Core functions', () => {
 		const generateExpectation = (initial: number, steps: number) => {
 			const result = [];
 			for (let i = 0; i < steps; i++) {
-				result.push(NOTE_TAG[initial % NOTE_TAG.length]);
+				result.push(NOTES[initial % NOTES.length]);
 				initial++;
 			}
 			return result;

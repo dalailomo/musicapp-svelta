@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { createFretboardMatrix } from '$lib/guitar';
-	import { SCALE, NOTE_TAG } from '$lib/consts';
-	import ScaleSelector from './Guitar/ScaleSelector.svelte';
+	import { SCALE, NOTES } from '$lib/consts';
+	import ScaleSelectorController from './Guitar/ScaleSelectorController.svelte';
 	import Fretboard from './Guitar/Fretboard.svelte';
 
-	let root = NOTE_TAG[0];
+	let root = NOTES[0];
 	let scale = SCALE['major'];
 	let steps = 22;
 
@@ -21,7 +21,7 @@
 </script>
 
 <div>
-	<ScaleSelector {root} {scale} on:input={onScaleChange} />
+	<ScaleSelectorController {root} {scale} on:input={onScaleChange} />
 	<br />
 	<Fretboard {steps} {items} on:input={onFretboardLengthChange} />
 </div>
