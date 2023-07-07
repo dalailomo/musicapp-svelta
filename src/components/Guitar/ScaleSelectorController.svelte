@@ -17,7 +17,7 @@
 		dispatch('input', buildOutput({ scale, root: event.detail }));
 	}
 
-	function onScaleSelected(event: CustomEvent<ScalePatternStep>) {
+	function onScaleSelected(event: CustomEvent<ScalePatternStep[]>) {
 		dispatch('input', buildOutput({ scale: event.detail, root }));
 	}
 </script>
