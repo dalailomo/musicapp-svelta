@@ -4,7 +4,7 @@
 	const dispatch = createEventDispatcher();
 
 	export let items: Note[][];
-	export let steps;
+	export let steps: number;
 
 	function onInput(e: Event) {
 		dispatch('input', (e.target as HTMLInputElement).value);

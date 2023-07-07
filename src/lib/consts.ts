@@ -29,7 +29,7 @@ export const NOTE_TAG = [
 
 // reference: https://en.wikipedia.org/wiki/List_of_musical_scales_and_modes
 
-export const SCALE = {
+export const SCALE: { [name: string]: string[] } = {
 	// H-H-H-H-H-H-H-H-H-H-H-H
 	chromatic: [H, H, H, H, H, H, H, H, H, H, H, H],
 

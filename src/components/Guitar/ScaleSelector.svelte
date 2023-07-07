@@ -9,7 +9,7 @@
 	const scaleList: string[] = Object.keys(SCALE);
 	let selected: string = Object.keys(SCALE)[1];
 
-	function buildOutput(param) {
+	function buildOutput(param: { scale: string[], root: string }) {
 		return { scale: param.scale, root: param.root };
 	}
 
@@ -23,7 +23,7 @@
 
 	function onModeChange(method: 'pop' | 'shift') {
 		const s = [...scale];
-		const e = s[method]();
+		const e: string = s[method]() || "";
 		scale = method === 'pop' ? [e, ...s] : [...s, e];
 		dispatch('input', buildOutput({ scale, root }));
 	}
