@@ -1,13 +1,17 @@
 <script lang="ts">
 	import { NOTES } from '$lib/consts';
 	import { createEventDispatcher } from 'svelte';
+	import Select, { Option } from '@smui/select';
+	import IconButton from '@smui/icon-button';
+	import ItemLane from '../Common/ItemLane.svelte';
 	const dispatch = createEventDispatcher();
 
     export let tunningNotes: Note[];
 
 	const noteList: Note[] = NOTES;
 
-    function onTuneChanged(i: number, { value }: any) {
+    function onTuneChanged(i: number, value: any) {
+        console.log(i, value)
         const localTunning = [...tunningNotes];
         localTunning[i] = value
         dispatch('on-tune-change', localTunning);
@@ -38,22 +42,23 @@
     }
 </script>
 
-<br>
-<br>
+<br />
+<ItemLane>
+    <IconButton class="material-icons" on:click={onShiftString}>remove</IconButton>
+    <IconButton class="material-icons" on:click={onUnshiftString}>add</IconButton>
 
-Tunning:
-<button on:click={onShiftString}>-</button>
-<button on:click={onUnshiftString}>+</button>
-
-{#each tunningNotes as note, tunningIndex}
-    <select bind:value={note} on:change={(e) => onTuneChanged(tunningIndex, e.target)}>
-        {#each noteList as noteListName}
-            <option value={noteListName}>
-                {noteListName}
-            </option>
+    <div class="select-hack-width">
+        {#each tunningNotes as note, tunningIndex}
+            <Select bind:value={note} variant="filled" on:SMUISelect:change={(e) => onTuneChanged(tunningIndex, e.detail.value)}>
+                {#each noteList as noteListName}
+                    <Option value={noteListName}>
+                        {noteListName}
+                    </Option>
+                {/each}
+            </Select>
         {/each}
-    </select>
-{/each}
+    </div>
 
-<button on:click={onPushString}>+</button>
-<button on:click={onPopString}>-</button>
+    <IconButton class="material-icons" on:click={onPushString}>add</IconButton>
+    <IconButton class="material-icons" on:click={onPopString}>remove</IconButton>
+</ItemLane>

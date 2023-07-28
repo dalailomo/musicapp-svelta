@@ -5,6 +5,8 @@
 	import ScaleModeSelector from './Guitar/ScaleModeSelector.svelte';
 	import Fretboard from './Guitar/Fretboard.svelte';
 	import TuningSelector from './Guitar/TuningSelector.svelte';
+	import ItemLane from './Common/ItemLane.svelte';
+	import FlexCenter from './Common/FlexCenter.svelte';
 
 	let root = NOTES[4];
 	let scaleName: ScaleName = 'major';
@@ -34,9 +36,16 @@
 </script>
 
 <div>
-	<ScaleSelectorController {root} {scaleName} on:input={onScaleChange} />
-	<ScaleModeSelector {scale} on:mode-selected={onScaleModeChange} />
-	<TuningSelector {tunningNotes} on:on-tune-change={onTuneChange} />
+	<FlexCenter>
+		<ItemLane>
+			<ScaleSelectorController {root} {scaleName} on:input={onScaleChange} />
+			<ScaleModeSelector {scale} on:mode-selected={onScaleModeChange} />
+		</ItemLane>
+	</FlexCenter>
+	<br />
+	<FlexCenter>
+		<TuningSelector {tunningNotes} on:on-tune-change={onTuneChange} />
+	</FlexCenter>
 	<br />
 	<Fretboard {steps} {items} on:input={onFretboardLengthChange} />
 </div>

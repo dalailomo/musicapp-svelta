@@ -1,22 +1,22 @@
 <script lang="ts">
     import { createEventDispatcher } from 'svelte';
     import { SCALE } from '$lib/consts';
+	import Select, { Option } from '@smui/select';
 
 	export let scaleName: ScaleName;
 	const scaleList: string[] = Object.keys(SCALE);
 
 	const dispatch = createEventDispatcher();
 
-    function onChangeScale(e: Event) {
-		dispatch('scale-selected', (e.target as HTMLInputElement).value as ScaleName);
+    function onChangeScale(e: CustomEvent) {
+		dispatch('scale-selected', e.detail.value as ScaleName);
 	}
 </script>
 
-Scale:
-<select bind:value={scaleName} on:change={onChangeScale}>
+<Select bind:value={scaleName} label="Scale" on:SMUISelect:change={onChangeScale}>
 	{#each scaleList as scaleListName}
-		<option value={scaleListName}>
+		<Option value={scaleListName}>
 			{scaleListName}
-		</option>
+		</Option>
 	{/each}
-</select>
+</Select>

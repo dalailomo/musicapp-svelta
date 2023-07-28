@@ -1,22 +1,22 @@
 <script lang="ts">
 	import { NOTES } from '$lib/consts';
 	import { createEventDispatcher } from 'svelte';
+	import Select, { Option } from '@smui/select';
 	const dispatch = createEventDispatcher();
 
 	export let root: string;
 	const noteList: Note[] = NOTES;
 
-	function onRootInput(e: Event) {
-		dispatch('root-note-selected', (e.target as HTMLInputElement).value as Note);
+	function onRootInput(e: CustomEvent) {
+		dispatch('root-note-selected', e.detail.value as Note);
 	}
 </script>
 
-Scale root note:
-<select bind:value={root} on:change={onRootInput}>
+<Select bind:value={root} label="Scale root" on:SMUISelect:change={onRootInput}>
 	{#each noteList as noteListName}
-		<option value={noteListName}>
+		<Option value={noteListName}>
 			{noteListName}
-		</option>
+		</Option>
 	{/each}
-</select>
+</Select>
 

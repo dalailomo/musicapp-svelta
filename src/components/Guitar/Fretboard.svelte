@@ -1,6 +1,9 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
 	import IconButton from '@smui/icon-button';
+	import ItemLane from '../Common/ItemLane.svelte';
+	import TextSpan from '../Common/TextSpan.svelte';
+	import FlexCenter from '../Common/FlexCenter.svelte';
 
 	const dispatch = createEventDispatcher();
 
@@ -54,12 +57,14 @@
 	{/each}
 </div>
 
-<div class="buttons">
-	<span>Fretboard length:</span>
-	<IconButton class="material-icons" on:click={decrement}>remove</IconButton>
-	<span>{steps}</span>
-	<IconButton class="material-icons" on:click={increment}>add</IconButton>
-</div>
+<FlexCenter>
+	<ItemLane>
+		<TextSpan>Fretboard length:</TextSpan>
+		<IconButton class="material-icons" on:click={decrement}>remove</IconButton>
+		<TextSpan>{steps}</TextSpan>
+		<IconButton class="material-icons" on:click={increment}>add</IconButton>
+	</ItemLane>
+</FlexCenter>
 
 <style lang="scss">
 	#fretboard {
@@ -92,7 +97,7 @@
 				padding: 5px;
 				width: 20px;
 				border-radius: 25px;
-				z-index: 10;
+				// z-index: 10;
 
 				& > span {
 					position: absolute;
@@ -157,12 +162,5 @@
 				}
 			}
 		}
-	}
-
-	.buttons {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		width: 280px;
 	}
 </style>

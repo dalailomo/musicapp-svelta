@@ -1,5 +1,8 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
+	import IconButton from '@smui/icon-button';
+	import ItemLane from '../Common/ItemLane.svelte';
+	import TextSpan from '../Common/TextSpan.svelte';
 
     export let scale: ScalePatternStep[];
 
@@ -13,7 +16,9 @@
 	}
 </script>
 
-Scale mode:
-<button on:click={() => onModeChange('pop')}>Previous mode</button>
-<code>{scale.join('-')}</code>
-<button on:click={() => onModeChange('shift')}>Next mode</button>
+<ItemLane>
+	<TextSpan>Scale mode:</TextSpan>
+	<IconButton class="material-icons"  on:click={() => onModeChange('pop')}>navigate_before</IconButton>
+	<TextSpan><big><code>{scale.join('-')}</code></big></TextSpan>
+	<IconButton class="material-icons"  on:click={() => onModeChange('shift')}>navigate_next</IconButton>
+</ItemLane>

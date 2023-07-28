@@ -2,6 +2,8 @@
 	import { createEventDispatcher } from 'svelte';
 	import RootNoteSelector from './ScaleSelectorController/RootNoteSelector.svelte';
 	import ScaleSelector from './ScaleSelectorController/ScaleSelector.svelte';
+	import ItemLane from '../Common/ItemLane.svelte';
+	import TextSpan from '../Common/TextSpan.svelte';
 
 	export let scaleName: ScaleName;
 	export let root: Note;
@@ -21,5 +23,11 @@
 	}
 </script>
 
-<RootNoteSelector {root} on:root-note-selected={onRootNoteSelected} />
-<ScaleSelector {scaleName} on:scale-selected={onScaleSelected} />
+<ItemLane>
+	<TextSpan>
+		<RootNoteSelector {root} on:root-note-selected={onRootNoteSelected} />
+	</TextSpan>
+	<TextSpan>
+		<ScaleSelector {scaleName} on:scale-selected={onScaleSelected} />
+	</TextSpan>
+</ItemLane>
