@@ -57,6 +57,15 @@ Fretboard length:
 <style lang="scss">
 	#fretboard {
 		font-family: 'Courier New', monospace;
+		width: 100%;
+		overflow-x: auto;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
+		.slot-line {
+			min-width: max-content;
+		}
 
 		.slot-line .slot {
 			position: relative;
