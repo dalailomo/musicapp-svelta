@@ -5,9 +5,14 @@
 
 	export let items: NoteMeta[][];
 	export let steps: number;
+	let current = steps;
 
-	function onInput(e: Event) {
-		dispatch('input', (e.target as HTMLInputElement).value);
+	function increment(e: Event) {
+		dispatch('input', ++current);
+	}
+
+	function decrement(e: Event) {
+		dispatch('input', --current);
 	}
 
 	function hasFretMarker(fretNumber: number) {
@@ -18,9 +23,7 @@
 
 <br>
 
-Fretboard length:
-
-<input type="number" on:input={onInput} bind:value={steps} />
+<button on:click={decrement}>-</button> Fretboard length: {steps} <button on:click={increment}>+</button>
 
 <div id="fretboard">
 	{#each items as slotLine, j}
