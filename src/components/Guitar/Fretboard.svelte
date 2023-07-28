@@ -31,8 +31,18 @@
 						class:fourth={slot.degree === 4}
 						class:fifth={slot.degree === 5}
 						class:sixth={slot.degree === 6}
-						class:seventh={slot.degree === 7}>{slot.note}</span
+						class:seventh={slot.degree === 7}
+						class:eighth={slot.degree === 8}
+						class:ninth={slot.degree === 9}
+						class:tenth={slot.degree === 10}
+						class:eleventh={slot.degree === 11}
+						class:twelveth={slot.degree === 12}
 					>
+						{slot.note} 
+						{#if slot.degree > 0}
+							<span>{slot.degree}</span>
+						{/if}
+					</span>
 					<span class="mark" class:hasMarker={hasFretMarker(i) && j === 3} />
 				</span>
 			{/each}
@@ -64,6 +74,17 @@
 				border-radius: 25px;
 				z-index: 10;
 
+				& > span {
+					position: absolute;
+					background: black;
+					color: white;
+					font-size: 10px;
+					padding: 3px;
+					border-radius: 100%;
+					top: -10px;
+					right: 0;
+				}
+
 				&.root {
 					background: #be4b4b;
 				}
@@ -73,7 +94,7 @@
 				}
 
 				&.third {
-					background: #444;
+					background: #8b8585;
 				}
 
 				&.fourth {
@@ -81,7 +102,7 @@
 				}
 
 				&.fifth {
-					background: #444;
+					background: #8a6a6a;
 				}
 
 				&.sixth {
@@ -89,6 +110,10 @@
 				}
 
 				&.seventh {
+					background: #7d7a54;
+				}
+
+				&.eighth, &.ninth, &.tenth, &.eleventh, &.twelveth {
 					background: #444;
 				}
 			}

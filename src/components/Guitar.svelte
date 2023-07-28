@@ -5,7 +5,7 @@
 	import ScaleModeSelector from './Guitar/ScaleModeSelector.svelte'
 	import Fretboard from './Guitar/Fretboard.svelte';
 
-	let root = NOTES[0];
+	let root = NOTES[4];
 	let scaleName: ScaleName = 'major';
 	let steps = 22;
 
