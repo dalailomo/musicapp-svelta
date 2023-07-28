@@ -37,8 +37,11 @@
         dispatch('on-tune-change', localTunning);
     }
 </script>
+
 <br>
 <br>
+
+Tunning:
 <button on:click={onShiftString}>-</button>
 <button on:click={onUnshiftString}>+</button>
 

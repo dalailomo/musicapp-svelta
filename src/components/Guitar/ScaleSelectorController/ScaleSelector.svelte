@@ -12,6 +12,7 @@
 	}
 </script>
 
+Scale:
 <select bind:value={scaleName} on:change={onChangeScale}>
 	{#each scaleList as scaleListName}
 		<option value={scaleListName}>

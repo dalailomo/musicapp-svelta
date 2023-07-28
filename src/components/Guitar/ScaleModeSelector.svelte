@@ -13,6 +13,7 @@
 	}
 </script>
 
+Scale mode:
 <button on:click={() => onModeChange('pop')}>Previous mode</button>
 <code>{scale.join('-')}</code>
 <button on:click={() => onModeChange('shift')}>Next mode</button>

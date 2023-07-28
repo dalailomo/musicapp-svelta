@@ -16,6 +16,10 @@
 	}
 </script>
 
+<br>
+
+Fretboard length:
+
 <input type="number" on:input={onInput} bind:value={steps} />
 
 <div id="fretboard">

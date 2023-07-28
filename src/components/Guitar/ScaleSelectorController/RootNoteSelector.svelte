@@ -11,6 +11,7 @@
 	}
 </script>
 
+Scale root note:
 <select bind:value={root} on:change={onRootInput}>
 	{#each noteList as noteListName}
 		<option value={noteListName}>
