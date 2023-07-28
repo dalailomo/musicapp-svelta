@@ -50,7 +50,7 @@
 							<span>{slot.degree}</span>
 						{/if}
 					</span>
-					<span class="mark" class:hasMarker={hasFretMarker(i) && j === 3} />
+					<span class="mark" class:hasMarker={hasFretMarker(i) && j === items.length - 1} />
 				</span>
 			{/each}
 		</div>
@@ -150,11 +150,11 @@
 			.mark {
 				position: absolute;
 				display: none;
-				width: 40px;
+				width: 20px;
 				height: 20px;
-				background: #111;
-				top: 135px;
-				left: 5px;
+				background: rgb(177, 177, 177);
+				top: 45px;
+				left: 15px;
 				border-radius: 8px;
 
 				&.hasMarker {
