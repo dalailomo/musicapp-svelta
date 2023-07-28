@@ -8,7 +8,7 @@
 	const dispatch = createEventDispatcher();
 
     function onChangeScale(e: Event) {
-		dispatch('scale-selected', SCALE[(e.target as HTMLInputElement).value as ScaleName] as ScalePatternStep[]);
+		dispatch('scale-selected', (e.target as HTMLInputElement).value as ScaleName);
 	}
 </script>
 
