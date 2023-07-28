@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
+	import IconButton from '@smui/icon-button';
 
 	const dispatch = createEventDispatcher();
 
@@ -20,10 +21,6 @@
 		return [3, 5, 7, 9].indexOf(fretNumber % 12) > -1;
 	}
 </script>
-
-<br>
-
-<button on:click={decrement}>-</button> Fretboard length: {steps} <button on:click={increment}>+</button>
 
 <div id="fretboard">
 	{#each items as slotLine, j}
@@ -55,6 +52,13 @@
 			{/each}
 		</div>
 	{/each}
+</div>
+
+<div class="buttons">
+	<span>Fretboard length:</span>
+	<IconButton class="material-icons" on:click={decrement}>remove</IconButton>
+	<span>{steps}</span>
+	<IconButton class="material-icons" on:click={increment}>add</IconButton>
 </div>
 
 <style lang="scss">
@@ -153,5 +157,12 @@
 				}
 			}
 		}
+	}
+
+	.buttons {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 280px;
 	}
 </style>
