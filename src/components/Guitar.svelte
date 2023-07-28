@@ -2,7 +2,7 @@
 	import { createFretboardMatrix } from '$lib/guitar';
 	import { SCALE, NOTES } from '$lib/consts';
 	import ScaleSelectorController from './Guitar/ScaleSelectorController.svelte';
-	import ScaleModeSelector from './Guitar/ScaleModeSelector.svelte'
+	import ScaleModeSelector from './Guitar/ScaleModeSelector.svelte';
 	import Fretboard from './Guitar/Fretboard.svelte';
 	import TuningSelector from './Guitar/TuningSelector.svelte';
 
