@@ -4,6 +4,4 @@
 
 <div>
 	<Guitar />
-	<br />
-	<Guitar />
 </div>

@@ -4,6 +4,7 @@
 	import ScaleSelector from './ScaleSelectorController/ScaleSelector.svelte';
 	import ModeSelector from './ScaleSelectorController/ModeSelector.svelte';
 
+	export let scaleName: ScaleName;
 	export let scale: ScalePatternStep[];
 	export let root: Note;
 
@@ -23,5 +24,5 @@
 </script>
 
 <RootNoteSelector {root} on:root-note-selected={onRootNoteSelected} />
-<ScaleSelector on:scale-selected={onScaleSelected} />
+<ScaleSelector {scaleName} on:scale-selected={onScaleSelected} />
 <ModeSelector {scale} on:mode-selected={onScaleSelected} />

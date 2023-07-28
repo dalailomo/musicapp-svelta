@@ -5,7 +5,8 @@
 	import Fretboard from './Guitar/Fretboard.svelte';
 
 	let root = NOTES[0];
-	let scale = SCALE['major'];
+	let scaleName: ScaleName = 'blues';
+	let scale = SCALE[scaleName];
 	let steps = 22;
 
 	function onScaleChange(event: CustomEvent) {
@@ -21,7 +22,7 @@
 </script>
 
 <div>
-	<ScaleSelectorController {root} {scale} on:input={onScaleChange} />
+	<ScaleSelectorController {root} {scale} {scaleName} on:input={onScaleChange} />
 	<br />
 	<Fretboard {steps} {items} on:input={onFretboardLengthChange} />
 </div>
