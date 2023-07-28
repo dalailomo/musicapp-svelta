@@ -8,6 +8,8 @@ const config = {
 	preprocess: vitePreprocess(),
 
 	kit: {
+		appDir: "mondongo",
+		
 		adapter: adapter(
 			{
 				// default options are shown. On some platforms
