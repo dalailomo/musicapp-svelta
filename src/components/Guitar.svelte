@@ -27,7 +27,7 @@
 </script>
 
 <div>
-	<ScaleSelectorController {root} {scale} {scaleName} on:input={onScaleChange} />
+	<ScaleSelectorController {root} {scaleName} on:input={onScaleChange} />
 	<ScaleModeSelector {scale} on:mode-selected={onScaleModeChange} />
 	<br />
 	<Fretboard {steps} {items} on:input={onFretboardLengthChange} />

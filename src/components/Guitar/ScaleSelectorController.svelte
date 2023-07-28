@@ -2,10 +2,8 @@
 	import { createEventDispatcher } from 'svelte';
 	import RootNoteSelector from './ScaleSelectorController/RootNoteSelector.svelte';
 	import ScaleSelector from './ScaleSelectorController/ScaleSelector.svelte';
-	import ModeSelector from './ScaleModeSelector.svelte';
 
 	export let scaleName: ScaleName;
-	export let scale: ScalePatternStep[];
 	export let root: Note;
 
 	const dispatch = createEventDispatcher();
