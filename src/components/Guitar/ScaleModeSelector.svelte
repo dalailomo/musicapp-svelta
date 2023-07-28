@@ -6,7 +6,6 @@
 	const dispatch = createEventDispatcher();
 
     function onModeChange(method: 'pop' | 'shift') {
-		console.log(scale)
 		const s = [...scale];
 		const e: ScalePatternStep = s[method]() as ScalePatternStep;
 		const s2 = method === 'pop' ? [e, ...s] : [...s, e];
