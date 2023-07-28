@@ -3,20 +3,39 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="./favicon.png" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 		
-		<link href="./mondongo/immutable/assets/2.1e890434.css" rel="stylesheet">
-		<link rel="modulepreload" href="./mondongo/immutable/entry/start.521477d7.js">
-		<link rel="modulepreload" href="./mondongo/immutable/chunks/index.91114a8c.js">
-		<link rel="modulepreload" href="./mondongo/immutable/chunks/singletons.901baae6.js">
-		<link rel="modulepreload" href="./mondongo/immutable/entry/app.b522f257.js">
-		<link rel="modulepreload" href="./mondongo/immutable/nodes/0.38f94ece.js">
-		<link rel="modulepreload" href="./mondongo/immutable/nodes/2.7d1ad6a8.js">
+		<link href="./mondongo/immutable/assets/2.684f44b5.css" rel="stylesheet">
+		<link rel="modulepreload" href="./mondongo/immutable/entry/start.f7b5de69.js">
+		<link rel="modulepreload" href="./mondongo/immutable/chunks/index.8d4f8c15.js">
+		<link rel="modulepreload" href="./mondongo/immutable/chunks/singletons.0a2020e7.js">
+		<link rel="modulepreload" href="./mondongo/immutable/chunks/index.1c4faca8.js">
+		<link rel="modulepreload" href="./mondongo/immutable/entry/app.069156ec.js">
+		<link rel="modulepreload" href="./mondongo/immutable/nodes/0.e6e946ec.js">
+		<link rel="modulepreload" href="./mondongo/immutable/nodes/2.0490addb.js">
+
+		<link rel="stylesheet" href="/musicapp-svelta/smui.css" media="(prefers-color-scheme: light)" />
+		<link
+			rel="stylesheet"
+			href="/musicapp-svelta/smui-dark.css"
+			media="screen and (prefers-color-scheme: dark)"
+		/>
+		
+		<!-- Hint where we get fonts from. -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+		<!-- Material Icons, Roboto, and Roboto Mono fonts -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Material+Icons&Roboto+Mono:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+			rel="stylesheet"
+		/>
 
 		<style>
-			body {
-				background: #333;
-				color: white;
+			.select-hack-width .mdc-select  {
+				width: 95px;
+				margin: 0 8px;
+				zoom: 75%;
 			}
 		</style>
 	</head>
@@ -24,559 +43,671 @@
 		<div style="display: contents">
 
 
-<div><div>Scale root note:
-<select><option value="C">C
-		</option><option value="C#">C#
-		</option><option value="D">D
-		</option><option value="D#">D#
-		</option><option value="E">E
-		</option><option value="F">F
-		</option><option value="F#">F#
-		</option><option value="G">G
-		</option><option value="G#">G#
-		</option><option value="A">A
-		</option><option value="A#">A#
-		</option><option value="B">B
-		</option></select>
-Scale:
-<select><option value="chromatic">chromatic
-		</option><option value="major">major
-		</option><option value="half-diminished">half-diminished
-		</option><option value="harmonic-major">harmonic-major
-		</option><option value="harmonic-minor">harmonic-minor
-		</option><option value="blues">blues
-		</option><option value="enigmatic">enigmatic
-		</option><option value="gipsy">gipsy
-		</option><option value="hungarian-gipsy">hungarian-gipsy
-		</option><option value="hungarian-major">hungarian-major
-		</option><option value="in">in
-		</option><option value="insen">insen
-		</option><option value="hirajoshi">hirajoshi
-		</option><option value="istrian">istrian
-		</option><option value="iwato">iwato
-		</option><option value="lydian-augmented">lydian-augmented
-		</option><option value="lydian-diminished">lydian-diminished
-		</option><option value="melodic-minor-ascending">melodic-minor-ascending
-		</option><option value="melodic-minor-descending">melodic-minor-descending
-		</option><option value="major-pentatonic">major-pentatonic
-		</option><option value="minor-pentatonic">minor-pentatonic
-		</option><option value="neapolitan-major">neapolitan-major
-		</option><option value="neapolitan-minor">neapolitan-minor
-		</option><option value="octatonic-1">octatonic-1
-		</option><option value="octatonic-2">octatonic-2
-		</option><option value="persian">persian
-		</option><option value="prometheus">prometheus
-		</option><option value="harmonics">harmonics
-		</option><option value="tritone">tritone
-		</option><option value="two-semitone-tritone">two-semitone-tritone
-		</option><option value="ukrainian-dorian">ukrainian-dorian
-		</option><option value="whole-tone">whole-tone
-		</option><option value="yo">yo
-		</option></select>
-	Scale mode:
-<button>Previous mode</button>
-<code>W-W-H-W-W-W-H</code>
-<button>Next mode</button>
+<div><div><div class="flex-center svelte-19hvuco"><div class="item-lane svelte-mjen91"><div class="item-lane svelte-mjen91"><span class="text-span svelte-a9pkzk"><div class="mdc-select smui-select--standard" style="">
+  <div class="mdc-select__anchor">
+    <label class="mdc-floating-label" style="" id="SMUI-select-0-smui-label">Scale root</label>
+    
+    
+    <span class="mdc-select__selected-text-container"><span id="SMUI-select-0-smui-selected-text" class="mdc-select__selected-text" role="button" aria-haspopup="listbox" aria-labelledby="SMUI-select-0-smui-label"></span></span>
+    <span class="mdc-select__dropdown-icon"><svg class="mdc-select__dropdown-icon-graphic" viewBox="7 10 10 5" focusable="false"><polygon class="mdc-select__dropdown-icon-inactive" stroke="none" fill-rule="evenodd" points="7 10 12 15 17 10"></polygon><polygon class="mdc-select__dropdown-icon-active" stroke="none" fill-rule="evenodd" points="7 15 12 10 17 15"></polygon></svg></span>
+    <div class="mdc-line-ripple" style=""></div></div>
+
+  
+
+<div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth" style=""><ul class="mdc-deprecated-list" role="listbox"><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="C" value="C"><span class="mdc-deprecated-list-item__ripple"></span>C
+		</li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="C#" value="C#"><span class="mdc-deprecated-list-item__ripple"></span>C#
+		</li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="D" value="D"><span class="mdc-deprecated-list-item__ripple"></span>D
+		</li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="D#" value="D#"><span class="mdc-deprecated-list-item__ripple"></span>D#
+		</li><li class="mdc-deprecated-list-item mdc-deprecated-list-item--selected" style="" role="option" aria-selected="true" aria-disabled="false" tabindex="0" data-value="E" value="E"><span class="mdc-deprecated-list-item__ripple"></span>E
+		</li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="F" value="F"><span class="mdc-deprecated-list-item__ripple"></span>F
+		</li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="F#" value="F#"><span class="mdc-deprecated-list-item__ripple"></span>F#
+		</li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="G" value="G"><span class="mdc-deprecated-list-item__ripple"></span>G
+		</li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="G#" value="G#"><span class="mdc-deprecated-list-item__ripple"></span>G#
+		</li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="A" value="A"><span class="mdc-deprecated-list-item__ripple"></span>A
+		</li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="A#" value="A#"><span class="mdc-deprecated-list-item__ripple"></span>A#
+		</li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="B" value="B"><span class="mdc-deprecated-list-item__ripple"></span>B
+		</li></ul>
+</div></div>
+</span>
+	<span class="text-span svelte-a9pkzk"><div class="mdc-select smui-select--standard" style="">
+  <div class="mdc-select__anchor">
+    <label class="mdc-floating-label" style="" id="SMUI-select-1-smui-label">Scale</label>
+    
+    
+    <span class="mdc-select__selected-text-container"><span id="SMUI-select-1-smui-selected-text" class="mdc-select__selected-text" role="button" aria-haspopup="listbox" aria-labelledby="SMUI-select-1-smui-label"></span></span>
+    <span class="mdc-select__dropdown-icon"><svg class="mdc-select__dropdown-icon-graphic" viewBox="7 10 10 5" focusable="false"><polygon class="mdc-select__dropdown-icon-inactive" stroke="none" fill-rule="evenodd" points="7 10 12 15 17 10"></polygon><polygon class="mdc-select__dropdown-icon-active" stroke="none" fill-rule="evenodd" points="7 15 12 10 17 15"></polygon></svg></span>
+    <div class="mdc-line-ripple" style=""></div></div>
+
+  
+
+<div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth" style=""><ul class="mdc-deprecated-list" role="listbox"><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="chromatic" value="chromatic"><span class="mdc-deprecated-list-item__ripple"></span>chromatic
+		</li><li class="mdc-deprecated-list-item mdc-deprecated-list-item--selected" style="" role="option" aria-selected="true" aria-disabled="false" tabindex="0" data-value="major" value="major"><span class="mdc-deprecated-list-item__ripple"></span>major
+		</li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="half-diminished" value="half-diminished"><span class="mdc-deprecated-list-item__ripple"></span>half-diminished
+		</li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="harmonic-major" value="harmonic-major"><span class="mdc-deprecated-list-item__ripple"></span>harmonic-major
+		</li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="harmonic-minor" value="harmonic-minor"><span class="mdc-deprecated-list-item__ripple"></span>harmonic-minor
+		</li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="blues" value="blues"><span class="mdc-deprecated-list-item__ripple"></span>blues
+		</li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="enigmatic" value="enigmatic"><span class="mdc-deprecated-list-item__ripple"></span>enigmatic
+		</li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="gipsy" value="gipsy"><span class="mdc-deprecated-list-item__ripple"></span>gipsy
+		</li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="hungarian-gipsy" value="hungarian-gipsy"><span class="mdc-deprecated-list-item__ripple"></span>hungarian-gipsy
+		</li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="hungarian-major" value="hungarian-major"><span class="mdc-deprecated-list-item__ripple"></span>hungarian-major
+		</li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="in" value="in"><span class="mdc-deprecated-list-item__ripple"></span>in
+		</li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="insen" value="insen"><span class="mdc-deprecated-list-item__ripple"></span>insen
+		</li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="hirajoshi" value="hirajoshi"><span class="mdc-deprecated-list-item__ripple"></span>hirajoshi
+		</li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="istrian" value="istrian"><span class="mdc-deprecated-list-item__ripple"></span>istrian
+		</li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="iwato" value="iwato"><span class="mdc-deprecated-list-item__ripple"></span>iwato
+		</li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="lydian-augmented" value="lydian-augmented"><span class="mdc-deprecated-list-item__ripple"></span>lydian-augmented
+		</li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="lydian-diminished" value="lydian-diminished"><span class="mdc-deprecated-list-item__ripple"></span>lydian-diminished
+		</li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="melodic-minor-ascending" value="melodic-minor-ascending"><span class="mdc-deprecated-list-item__ripple"></span>melodic-minor-ascending
+		</li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="melodic-minor-descending" value="melodic-minor-descending"><span class="mdc-deprecated-list-item__ripple"></span>melodic-minor-descending
+		</li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="major-pentatonic" value="major-pentatonic"><span class="mdc-deprecated-list-item__ripple"></span>major-pentatonic
+		</li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="minor-pentatonic" value="minor-pentatonic"><span class="mdc-deprecated-list-item__ripple"></span>minor-pentatonic
+		</li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="neapolitan-major" value="neapolitan-major"><span class="mdc-deprecated-list-item__ripple"></span>neapolitan-major
+		</li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="neapolitan-minor" value="neapolitan-minor"><span class="mdc-deprecated-list-item__ripple"></span>neapolitan-minor
+		</li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="octatonic-1" value="octatonic-1"><span class="mdc-deprecated-list-item__ripple"></span>octatonic-1
+		</li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="octatonic-2" value="octatonic-2"><span class="mdc-deprecated-list-item__ripple"></span>octatonic-2
+		</li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="persian" value="persian"><span class="mdc-deprecated-list-item__ripple"></span>persian
+		</li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="prometheus" value="prometheus"><span class="mdc-deprecated-list-item__ripple"></span>prometheus
+		</li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="harmonics" value="harmonics"><span class="mdc-deprecated-list-item__ripple"></span>harmonics
+		</li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="tritone" value="tritone"><span class="mdc-deprecated-list-item__ripple"></span>tritone
+		</li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="two-semitone-tritone" value="two-semitone-tritone"><span class="mdc-deprecated-list-item__ripple"></span>two-semitone-tritone
+		</li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="ukrainian-dorian" value="ukrainian-dorian"><span class="mdc-deprecated-list-item__ripple"></span>ukrainian-dorian
+		</li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="whole-tone" value="whole-tone"><span class="mdc-deprecated-list-item__ripple"></span>whole-tone
+		</li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="yo" value="yo"><span class="mdc-deprecated-list-item__ripple"></span>yo
+		</li></ul>
+</div></div>
+</span></div>
+			<div class="item-lane svelte-mjen91"><span class="text-span svelte-a9pkzk">Scale mode:</span>
+	<button class="material-icons mdc-icon-button mdc-icon-button--display-flex" style=""><div class="mdc-icon-button__ripple"></div>
+  navigate_before</button>
+	<span class="text-span svelte-a9pkzk"><big><code>W-W-H-W-W-W-H</code></big></span>
+	<button class="material-icons mdc-icon-button mdc-icon-button--display-flex" style=""><div class="mdc-icon-button__ripple"></div>
+  navigate_next</button></div></div></div>
 	<br>
-<br>
+	<div class="flex-center svelte-19hvuco"><br>
+<div class="item-lane svelte-mjen91"><button class="material-icons mdc-icon-button mdc-icon-button--display-flex" style=""><div class="mdc-icon-button__ripple"></div>
+  remove</button>
+    <button class="material-icons mdc-icon-button mdc-icon-button--display-flex" style=""><div class="mdc-icon-button__ripple"></div>
+  add</button>
 
-Tunning:
-<button>-</button>
-<button>+</button>
+    <div class="select-hack-width"><div class="mdc-select mdc-select--filled mdc-select--no-label" style="">
+  <div class="mdc-select__anchor"><span class="mdc-select__ripple"></span>
+    
+    
+    
+    <span class="mdc-select__selected-text-container"><span id="SMUI-select-2-smui-selected-text" class="mdc-select__selected-text" role="button" aria-haspopup="listbox" aria-labelledby="SMUI-select-2-smui-label"></span></span>
+    <span class="mdc-select__dropdown-icon"><svg class="mdc-select__dropdown-icon-graphic" viewBox="7 10 10 5" focusable="false"><polygon class="mdc-select__dropdown-icon-inactive" stroke="none" fill-rule="evenodd" points="7 10 12 15 17 10"></polygon><polygon class="mdc-select__dropdown-icon-active" stroke="none" fill-rule="evenodd" points="7 15 12 10 17 15"></polygon></svg></span>
+    <div class="mdc-line-ripple" style=""></div></div>
 
-<select><option value="C">C
-            </option><option value="C#">C#
-            </option><option value="D">D
-            </option><option value="D#">D#
-            </option><option value="E">E
-            </option><option value="F">F
-            </option><option value="F#">F#
-            </option><option value="G">G
-            </option><option value="G#">G#
-            </option><option value="A">A
-            </option><option value="A#">A#
-            </option><option value="B">B
-            </option></select><select><option value="C">C
-            </option><option value="C#">C#
-            </option><option value="D">D
-            </option><option value="D#">D#
-            </option><option value="E">E
-            </option><option value="F">F
-            </option><option value="F#">F#
-            </option><option value="G">G
-            </option><option value="G#">G#
-            </option><option value="A">A
-            </option><option value="A#">A#
-            </option><option value="B">B
-            </option></select><select><option value="C">C
-            </option><option value="C#">C#
-            </option><option value="D">D
-            </option><option value="D#">D#
-            </option><option value="E">E
-            </option><option value="F">F
-            </option><option value="F#">F#
-            </option><option value="G">G
-            </option><option value="G#">G#
-            </option><option value="A">A
-            </option><option value="A#">A#
-            </option><option value="B">B
-            </option></select><select><option value="C">C
-            </option><option value="C#">C#
-            </option><option value="D">D
-            </option><option value="D#">D#
-            </option><option value="E">E
-            </option><option value="F">F
-            </option><option value="F#">F#
-            </option><option value="G">G
-            </option><option value="G#">G#
-            </option><option value="A">A
-            </option><option value="A#">A#
-            </option><option value="B">B
-            </option></select><select><option value="C">C
-            </option><option value="C#">C#
-            </option><option value="D">D
-            </option><option value="D#">D#
-            </option><option value="E">E
-            </option><option value="F">F
-            </option><option value="F#">F#
-            </option><option value="G">G
-            </option><option value="G#">G#
-            </option><option value="A">A
-            </option><option value="A#">A#
-            </option><option value="B">B
-            </option></select><select><option value="C">C
-            </option><option value="C#">C#
-            </option><option value="D">D
-            </option><option value="D#">D#
-            </option><option value="E">E
-            </option><option value="F">F
-            </option><option value="F#">F#
-            </option><option value="G">G
-            </option><option value="G#">G#
-            </option><option value="A">A
-            </option><option value="A#">A#
-            </option><option value="B">B
-            </option></select>
+  
 
-<button>+</button>
-<button>-</button>
+<div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth" style=""><ul class="mdc-deprecated-list" role="listbox"><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="C" value="C"><span class="mdc-deprecated-list-item__ripple"></span>C
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="C#" value="C#"><span class="mdc-deprecated-list-item__ripple"></span>C#
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="D" value="D"><span class="mdc-deprecated-list-item__ripple"></span>D
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="D#" value="D#"><span class="mdc-deprecated-list-item__ripple"></span>D#
+                    </li><li class="mdc-deprecated-list-item mdc-deprecated-list-item--selected" style="" role="option" aria-selected="true" aria-disabled="false" tabindex="0" data-value="E" value="E"><span class="mdc-deprecated-list-item__ripple"></span>E
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="F" value="F"><span class="mdc-deprecated-list-item__ripple"></span>F
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="F#" value="F#"><span class="mdc-deprecated-list-item__ripple"></span>F#
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="G" value="G"><span class="mdc-deprecated-list-item__ripple"></span>G
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="G#" value="G#"><span class="mdc-deprecated-list-item__ripple"></span>G#
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="A" value="A"><span class="mdc-deprecated-list-item__ripple"></span>A
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="A#" value="A#"><span class="mdc-deprecated-list-item__ripple"></span>A#
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="B" value="B"><span class="mdc-deprecated-list-item__ripple"></span>B
+                    </li>
+            </ul>
+</div></div>
+<div class="mdc-select mdc-select--filled mdc-select--no-label" style="">
+  <div class="mdc-select__anchor"><span class="mdc-select__ripple"></span>
+    
+    
+    
+    <span class="mdc-select__selected-text-container"><span id="SMUI-select-3-smui-selected-text" class="mdc-select__selected-text" role="button" aria-haspopup="listbox" aria-labelledby="SMUI-select-3-smui-label"></span></span>
+    <span class="mdc-select__dropdown-icon"><svg class="mdc-select__dropdown-icon-graphic" viewBox="7 10 10 5" focusable="false"><polygon class="mdc-select__dropdown-icon-inactive" stroke="none" fill-rule="evenodd" points="7 10 12 15 17 10"></polygon><polygon class="mdc-select__dropdown-icon-active" stroke="none" fill-rule="evenodd" points="7 15 12 10 17 15"></polygon></svg></span>
+    <div class="mdc-line-ripple" style=""></div></div>
+
+  
+
+<div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth" style=""><ul class="mdc-deprecated-list" role="listbox"><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="C" value="C"><span class="mdc-deprecated-list-item__ripple"></span>C
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="C#" value="C#"><span class="mdc-deprecated-list-item__ripple"></span>C#
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="D" value="D"><span class="mdc-deprecated-list-item__ripple"></span>D
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="D#" value="D#"><span class="mdc-deprecated-list-item__ripple"></span>D#
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="E" value="E"><span class="mdc-deprecated-list-item__ripple"></span>E
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="F" value="F"><span class="mdc-deprecated-list-item__ripple"></span>F
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="F#" value="F#"><span class="mdc-deprecated-list-item__ripple"></span>F#
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="G" value="G"><span class="mdc-deprecated-list-item__ripple"></span>G
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="G#" value="G#"><span class="mdc-deprecated-list-item__ripple"></span>G#
+                    </li><li class="mdc-deprecated-list-item mdc-deprecated-list-item--selected" style="" role="option" aria-selected="true" aria-disabled="false" tabindex="0" data-value="A" value="A"><span class="mdc-deprecated-list-item__ripple"></span>A
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="A#" value="A#"><span class="mdc-deprecated-list-item__ripple"></span>A#
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="B" value="B"><span class="mdc-deprecated-list-item__ripple"></span>B
+                    </li>
+            </ul>
+</div></div>
+<div class="mdc-select mdc-select--filled mdc-select--no-label" style="">
+  <div class="mdc-select__anchor"><span class="mdc-select__ripple"></span>
+    
+    
+    
+    <span class="mdc-select__selected-text-container"><span id="SMUI-select-4-smui-selected-text" class="mdc-select__selected-text" role="button" aria-haspopup="listbox" aria-labelledby="SMUI-select-4-smui-label"></span></span>
+    <span class="mdc-select__dropdown-icon"><svg class="mdc-select__dropdown-icon-graphic" viewBox="7 10 10 5" focusable="false"><polygon class="mdc-select__dropdown-icon-inactive" stroke="none" fill-rule="evenodd" points="7 10 12 15 17 10"></polygon><polygon class="mdc-select__dropdown-icon-active" stroke="none" fill-rule="evenodd" points="7 15 12 10 17 15"></polygon></svg></span>
+    <div class="mdc-line-ripple" style=""></div></div>
+
+  
+
+<div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth" style=""><ul class="mdc-deprecated-list" role="listbox"><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="C" value="C"><span class="mdc-deprecated-list-item__ripple"></span>C
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="C#" value="C#"><span class="mdc-deprecated-list-item__ripple"></span>C#
+                    </li><li class="mdc-deprecated-list-item mdc-deprecated-list-item--selected" style="" role="option" aria-selected="true" aria-disabled="false" tabindex="0" data-value="D" value="D"><span class="mdc-deprecated-list-item__ripple"></span>D
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="D#" value="D#"><span class="mdc-deprecated-list-item__ripple"></span>D#
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="E" value="E"><span class="mdc-deprecated-list-item__ripple"></span>E
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="F" value="F"><span class="mdc-deprecated-list-item__ripple"></span>F
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="F#" value="F#"><span class="mdc-deprecated-list-item__ripple"></span>F#
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="G" value="G"><span class="mdc-deprecated-list-item__ripple"></span>G
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="G#" value="G#"><span class="mdc-deprecated-list-item__ripple"></span>G#
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="A" value="A"><span class="mdc-deprecated-list-item__ripple"></span>A
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="A#" value="A#"><span class="mdc-deprecated-list-item__ripple"></span>A#
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="B" value="B"><span class="mdc-deprecated-list-item__ripple"></span>B
+                    </li>
+            </ul>
+</div></div>
+<div class="mdc-select mdc-select--filled mdc-select--no-label" style="">
+  <div class="mdc-select__anchor"><span class="mdc-select__ripple"></span>
+    
+    
+    
+    <span class="mdc-select__selected-text-container"><span id="SMUI-select-5-smui-selected-text" class="mdc-select__selected-text" role="button" aria-haspopup="listbox" aria-labelledby="SMUI-select-5-smui-label"></span></span>
+    <span class="mdc-select__dropdown-icon"><svg class="mdc-select__dropdown-icon-graphic" viewBox="7 10 10 5" focusable="false"><polygon class="mdc-select__dropdown-icon-inactive" stroke="none" fill-rule="evenodd" points="7 10 12 15 17 10"></polygon><polygon class="mdc-select__dropdown-icon-active" stroke="none" fill-rule="evenodd" points="7 15 12 10 17 15"></polygon></svg></span>
+    <div class="mdc-line-ripple" style=""></div></div>
+
+  
+
+<div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth" style=""><ul class="mdc-deprecated-list" role="listbox"><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="C" value="C"><span class="mdc-deprecated-list-item__ripple"></span>C
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="C#" value="C#"><span class="mdc-deprecated-list-item__ripple"></span>C#
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="D" value="D"><span class="mdc-deprecated-list-item__ripple"></span>D
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="D#" value="D#"><span class="mdc-deprecated-list-item__ripple"></span>D#
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="E" value="E"><span class="mdc-deprecated-list-item__ripple"></span>E
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="F" value="F"><span class="mdc-deprecated-list-item__ripple"></span>F
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="F#" value="F#"><span class="mdc-deprecated-list-item__ripple"></span>F#
+                    </li><li class="mdc-deprecated-list-item mdc-deprecated-list-item--selected" style="" role="option" aria-selected="true" aria-disabled="false" tabindex="0" data-value="G" value="G"><span class="mdc-deprecated-list-item__ripple"></span>G
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="G#" value="G#"><span class="mdc-deprecated-list-item__ripple"></span>G#
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="A" value="A"><span class="mdc-deprecated-list-item__ripple"></span>A
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="A#" value="A#"><span class="mdc-deprecated-list-item__ripple"></span>A#
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="B" value="B"><span class="mdc-deprecated-list-item__ripple"></span>B
+                    </li>
+            </ul>
+</div></div>
+<div class="mdc-select mdc-select--filled mdc-select--no-label" style="">
+  <div class="mdc-select__anchor"><span class="mdc-select__ripple"></span>
+    
+    
+    
+    <span class="mdc-select__selected-text-container"><span id="SMUI-select-6-smui-selected-text" class="mdc-select__selected-text" role="button" aria-haspopup="listbox" aria-labelledby="SMUI-select-6-smui-label"></span></span>
+    <span class="mdc-select__dropdown-icon"><svg class="mdc-select__dropdown-icon-graphic" viewBox="7 10 10 5" focusable="false"><polygon class="mdc-select__dropdown-icon-inactive" stroke="none" fill-rule="evenodd" points="7 10 12 15 17 10"></polygon><polygon class="mdc-select__dropdown-icon-active" stroke="none" fill-rule="evenodd" points="7 15 12 10 17 15"></polygon></svg></span>
+    <div class="mdc-line-ripple" style=""></div></div>
+
+  
+
+<div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth" style=""><ul class="mdc-deprecated-list" role="listbox"><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="C" value="C"><span class="mdc-deprecated-list-item__ripple"></span>C
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="C#" value="C#"><span class="mdc-deprecated-list-item__ripple"></span>C#
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="D" value="D"><span class="mdc-deprecated-list-item__ripple"></span>D
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="D#" value="D#"><span class="mdc-deprecated-list-item__ripple"></span>D#
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="E" value="E"><span class="mdc-deprecated-list-item__ripple"></span>E
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="F" value="F"><span class="mdc-deprecated-list-item__ripple"></span>F
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="F#" value="F#"><span class="mdc-deprecated-list-item__ripple"></span>F#
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="G" value="G"><span class="mdc-deprecated-list-item__ripple"></span>G
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="G#" value="G#"><span class="mdc-deprecated-list-item__ripple"></span>G#
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="A" value="A"><span class="mdc-deprecated-list-item__ripple"></span>A
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="A#" value="A#"><span class="mdc-deprecated-list-item__ripple"></span>A#
+                    </li><li class="mdc-deprecated-list-item mdc-deprecated-list-item--selected" style="" role="option" aria-selected="true" aria-disabled="false" tabindex="0" data-value="B" value="B"><span class="mdc-deprecated-list-item__ripple"></span>B
+                    </li>
+            </ul>
+</div></div>
+<div class="mdc-select mdc-select--filled mdc-select--no-label" style="">
+  <div class="mdc-select__anchor"><span class="mdc-select__ripple"></span>
+    
+    
+    
+    <span class="mdc-select__selected-text-container"><span id="SMUI-select-7-smui-selected-text" class="mdc-select__selected-text" role="button" aria-haspopup="listbox" aria-labelledby="SMUI-select-7-smui-label"></span></span>
+    <span class="mdc-select__dropdown-icon"><svg class="mdc-select__dropdown-icon-graphic" viewBox="7 10 10 5" focusable="false"><polygon class="mdc-select__dropdown-icon-inactive" stroke="none" fill-rule="evenodd" points="7 10 12 15 17 10"></polygon><polygon class="mdc-select__dropdown-icon-active" stroke="none" fill-rule="evenodd" points="7 15 12 10 17 15"></polygon></svg></span>
+    <div class="mdc-line-ripple" style=""></div></div>
+
+  
+
+<div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth" style=""><ul class="mdc-deprecated-list" role="listbox"><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="C" value="C"><span class="mdc-deprecated-list-item__ripple"></span>C
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="C#" value="C#"><span class="mdc-deprecated-list-item__ripple"></span>C#
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="D" value="D"><span class="mdc-deprecated-list-item__ripple"></span>D
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="D#" value="D#"><span class="mdc-deprecated-list-item__ripple"></span>D#
+                    </li><li class="mdc-deprecated-list-item mdc-deprecated-list-item--selected" style="" role="option" aria-selected="true" aria-disabled="false" tabindex="0" data-value="E" value="E"><span class="mdc-deprecated-list-item__ripple"></span>E
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="F" value="F"><span class="mdc-deprecated-list-item__ripple"></span>F
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="F#" value="F#"><span class="mdc-deprecated-list-item__ripple"></span>F#
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="G" value="G"><span class="mdc-deprecated-list-item__ripple"></span>G
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="G#" value="G#"><span class="mdc-deprecated-list-item__ripple"></span>G#
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="A" value="A"><span class="mdc-deprecated-list-item__ripple"></span>A
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="A#" value="A#"><span class="mdc-deprecated-list-item__ripple"></span>A#
+                    </li><li class="mdc-deprecated-list-item" style="" role="option" aria-selected="false" aria-disabled="false" tabindex="-1" data-value="B" value="B"><span class="mdc-deprecated-list-item__ripple"></span>B
+                    </li>
+            </ul>
+</div></div>
+</div>
+
+    <button class="material-icons mdc-icon-button mdc-icon-button--display-flex" style=""><div class="mdc-icon-button__ripple"></div>
+  add</button>
+    <button class="material-icons mdc-icon-button mdc-icon-button--display-flex" style=""><div class="mdc-icon-button__ripple"></div>
+  remove</button></div></div>
 	<br>
-	<br>
+	<div id="fretboard" class="svelte-ejv5ry"><div class="slot-line svelte-ejv5ry"><span class="slot svelte-ejv5ry zero"><span class="note svelte-ejv5ry root">E 
+						<span class="svelte-ejv5ry">1</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">F 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry  second">F# 
+						<span class="svelte-ejv5ry">2</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">G 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry   third">G# 
+						<span class="svelte-ejv5ry">3</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry    fourth">A 
+						<span class="svelte-ejv5ry">4</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">A# 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry     fifth">B 
+						<span class="svelte-ejv5ry">5</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">C 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry      sixth">C# 
+						<span class="svelte-ejv5ry">6</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">D 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry       seventh">D# 
+						<span class="svelte-ejv5ry">7</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry root">E 
+						<span class="svelte-ejv5ry">1</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">F 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry  second">F# 
+						<span class="svelte-ejv5ry">2</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">G 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry   third">G# 
+						<span class="svelte-ejv5ry">3</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry    fourth">A 
+						<span class="svelte-ejv5ry">4</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">A# 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry     fifth">B 
+						<span class="svelte-ejv5ry">5</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">C 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry      sixth">C# 
+						<span class="svelte-ejv5ry">6</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span>
+		</div><div class="slot-line svelte-ejv5ry"><span class="slot svelte-ejv5ry zero"><span class="note svelte-ejv5ry     fifth">B 
+						<span class="svelte-ejv5ry">5</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">C 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry      sixth">C# 
+						<span class="svelte-ejv5ry">6</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">D 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry       seventh">D# 
+						<span class="svelte-ejv5ry">7</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry root">E 
+						<span class="svelte-ejv5ry">1</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">F 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry  second">F# 
+						<span class="svelte-ejv5ry">2</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">G 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry   third">G# 
+						<span class="svelte-ejv5ry">3</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry    fourth">A 
+						<span class="svelte-ejv5ry">4</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">A# 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry     fifth">B 
+						<span class="svelte-ejv5ry">5</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">C 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry      sixth">C# 
+						<span class="svelte-ejv5ry">6</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">D 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry       seventh">D# 
+						<span class="svelte-ejv5ry">7</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry root">E 
+						<span class="svelte-ejv5ry">1</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">F 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry  second">F# 
+						<span class="svelte-ejv5ry">2</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">G 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry   third">G# 
+						<span class="svelte-ejv5ry">3</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span>
+		</div><div class="slot-line svelte-ejv5ry"><span class="slot svelte-ejv5ry zero"><span class="note svelte-ejv5ry">G 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry   third">G# 
+						<span class="svelte-ejv5ry">3</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry    fourth">A 
+						<span class="svelte-ejv5ry">4</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">A# 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry     fifth">B 
+						<span class="svelte-ejv5ry">5</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">C 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry      sixth">C# 
+						<span class="svelte-ejv5ry">6</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">D 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry       seventh">D# 
+						<span class="svelte-ejv5ry">7</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry root">E 
+						<span class="svelte-ejv5ry">1</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">F 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry  second">F# 
+						<span class="svelte-ejv5ry">2</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">G 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry   third">G# 
+						<span class="svelte-ejv5ry">3</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry    fourth">A 
+						<span class="svelte-ejv5ry">4</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">A# 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry     fifth">B 
+						<span class="svelte-ejv5ry">5</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">C 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry      sixth">C# 
+						<span class="svelte-ejv5ry">6</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">D 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry       seventh">D# 
+						<span class="svelte-ejv5ry">7</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry root">E 
+						<span class="svelte-ejv5ry">1</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span>
+		</div><div class="slot-line svelte-ejv5ry"><span class="slot svelte-ejv5ry zero"><span class="note svelte-ejv5ry">D 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry       seventh">D# 
+						<span class="svelte-ejv5ry">7</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry root">E 
+						<span class="svelte-ejv5ry">1</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">F 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry  second">F# 
+						<span class="svelte-ejv5ry">2</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">G 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry   third">G# 
+						<span class="svelte-ejv5ry">3</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry    fourth">A 
+						<span class="svelte-ejv5ry">4</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">A# 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry     fifth">B 
+						<span class="svelte-ejv5ry">5</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">C 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry      sixth">C# 
+						<span class="svelte-ejv5ry">6</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">D 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry       seventh">D# 
+						<span class="svelte-ejv5ry">7</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry root">E 
+						<span class="svelte-ejv5ry">1</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">F 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry  second">F# 
+						<span class="svelte-ejv5ry">2</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">G 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry   third">G# 
+						<span class="svelte-ejv5ry">3</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry    fourth">A 
+						<span class="svelte-ejv5ry">4</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">A# 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry     fifth">B 
+						<span class="svelte-ejv5ry">5</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span>
+		</div><div class="slot-line svelte-ejv5ry"><span class="slot svelte-ejv5ry zero"><span class="note svelte-ejv5ry    fourth">A 
+						<span class="svelte-ejv5ry">4</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">A# 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry     fifth">B 
+						<span class="svelte-ejv5ry">5</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">C 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry      sixth">C# 
+						<span class="svelte-ejv5ry">6</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">D 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry       seventh">D# 
+						<span class="svelte-ejv5ry">7</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry root">E 
+						<span class="svelte-ejv5ry">1</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">F 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry  second">F# 
+						<span class="svelte-ejv5ry">2</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">G 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry   third">G# 
+						<span class="svelte-ejv5ry">3</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry    fourth">A 
+						<span class="svelte-ejv5ry">4</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">A# 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry     fifth">B 
+						<span class="svelte-ejv5ry">5</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">C 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry      sixth">C# 
+						<span class="svelte-ejv5ry">6</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">D 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry       seventh">D# 
+						<span class="svelte-ejv5ry">7</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry root">E 
+						<span class="svelte-ejv5ry">1</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">F 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry  second">F# 
+						<span class="svelte-ejv5ry">2</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span>
+		</div><div class="slot-line svelte-ejv5ry"><span class="slot svelte-ejv5ry zero"><span class="note svelte-ejv5ry root">E 
+						<span class="svelte-ejv5ry">1</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">F 
+						</span>
+					<span class="mark svelte-ejv5ry hasMarker"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry  second">F# 
+						<span class="svelte-ejv5ry">2</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">G 
+						</span>
+					<span class="mark svelte-ejv5ry hasMarker"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry   third">G# 
+						<span class="svelte-ejv5ry">3</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry    fourth">A 
+						<span class="svelte-ejv5ry">4</span></span>
+					<span class="mark svelte-ejv5ry hasMarker"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">A# 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry     fifth">B 
+						<span class="svelte-ejv5ry">5</span></span>
+					<span class="mark svelte-ejv5ry hasMarker"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">C 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry      sixth">C# 
+						<span class="svelte-ejv5ry">6</span></span>
+					<span class="mark svelte-ejv5ry hasMarker"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">D 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry       seventh">D# 
+						<span class="svelte-ejv5ry">7</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry root">E 
+						<span class="svelte-ejv5ry">1</span></span>
+					<span class="mark svelte-ejv5ry hasMarker"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">F 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry  second">F# 
+						<span class="svelte-ejv5ry">2</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">G 
+						</span>
+					<span class="mark svelte-ejv5ry hasMarker"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry   third">G# 
+						<span class="svelte-ejv5ry">3</span></span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry    fourth">A 
+						<span class="svelte-ejv5ry">4</span></span>
+					<span class="mark svelte-ejv5ry hasMarker"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">A# 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry     fifth">B 
+						<span class="svelte-ejv5ry">5</span></span>
+					<span class="mark svelte-ejv5ry hasMarker"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry">C 
+						</span>
+					<span class="mark svelte-ejv5ry"></span>
+				</span><span class="slot svelte-ejv5ry"><span class="note svelte-ejv5ry      sixth">C# 
+						<span class="svelte-ejv5ry">6</span></span>
+					<span class="mark svelte-ejv5ry hasMarker"></span>
+				</span>
+		</div></div>
 
-Fretboard length:
-
-<input type="number" value="22">
-
-<div id="fretboard" class="svelte-1hs3fqz"><div class="slot-line"><span class="slot svelte-1hs3fqz zero"><span class="note svelte-1hs3fqz root">E 
-						<span class="svelte-1hs3fqz">1</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">F 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz  second">F# 
-						<span class="svelte-1hs3fqz">2</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">G 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz   third">G# 
-						<span class="svelte-1hs3fqz">3</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz    fourth">A 
-						<span class="svelte-1hs3fqz">4</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">A# 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz     fifth">B 
-						<span class="svelte-1hs3fqz">5</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">C 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz      sixth">C# 
-						<span class="svelte-1hs3fqz">6</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">D 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz       seventh">D# 
-						<span class="svelte-1hs3fqz">7</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz root">E 
-						<span class="svelte-1hs3fqz">1</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">F 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz  second">F# 
-						<span class="svelte-1hs3fqz">2</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">G 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz   third">G# 
-						<span class="svelte-1hs3fqz">3</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz    fourth">A 
-						<span class="svelte-1hs3fqz">4</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">A# 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz     fifth">B 
-						<span class="svelte-1hs3fqz">5</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">C 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz      sixth">C# 
-						<span class="svelte-1hs3fqz">6</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span>
-		</div><div class="slot-line"><span class="slot svelte-1hs3fqz zero"><span class="note svelte-1hs3fqz     fifth">B 
-						<span class="svelte-1hs3fqz">5</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">C 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz      sixth">C# 
-						<span class="svelte-1hs3fqz">6</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">D 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz       seventh">D# 
-						<span class="svelte-1hs3fqz">7</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz root">E 
-						<span class="svelte-1hs3fqz">1</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">F 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz  second">F# 
-						<span class="svelte-1hs3fqz">2</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">G 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz   third">G# 
-						<span class="svelte-1hs3fqz">3</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz    fourth">A 
-						<span class="svelte-1hs3fqz">4</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">A# 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz     fifth">B 
-						<span class="svelte-1hs3fqz">5</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">C 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz      sixth">C# 
-						<span class="svelte-1hs3fqz">6</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">D 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz       seventh">D# 
-						<span class="svelte-1hs3fqz">7</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz root">E 
-						<span class="svelte-1hs3fqz">1</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">F 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz  second">F# 
-						<span class="svelte-1hs3fqz">2</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">G 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz   third">G# 
-						<span class="svelte-1hs3fqz">3</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span>
-		</div><div class="slot-line"><span class="slot svelte-1hs3fqz zero"><span class="note svelte-1hs3fqz">G 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz   third">G# 
-						<span class="svelte-1hs3fqz">3</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz    fourth">A 
-						<span class="svelte-1hs3fqz">4</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">A# 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz     fifth">B 
-						<span class="svelte-1hs3fqz">5</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">C 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz      sixth">C# 
-						<span class="svelte-1hs3fqz">6</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">D 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz       seventh">D# 
-						<span class="svelte-1hs3fqz">7</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz root">E 
-						<span class="svelte-1hs3fqz">1</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">F 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz  second">F# 
-						<span class="svelte-1hs3fqz">2</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">G 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz   third">G# 
-						<span class="svelte-1hs3fqz">3</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz    fourth">A 
-						<span class="svelte-1hs3fqz">4</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">A# 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz     fifth">B 
-						<span class="svelte-1hs3fqz">5</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">C 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz      sixth">C# 
-						<span class="svelte-1hs3fqz">6</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">D 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz       seventh">D# 
-						<span class="svelte-1hs3fqz">7</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz root">E 
-						<span class="svelte-1hs3fqz">1</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span>
-		</div><div class="slot-line"><span class="slot svelte-1hs3fqz zero"><span class="note svelte-1hs3fqz">D 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz       seventh">D# 
-						<span class="svelte-1hs3fqz">7</span></span>
-					<span class="mark svelte-1hs3fqz hasMarker"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz root">E 
-						<span class="svelte-1hs3fqz">1</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">F 
-						</span>
-					<span class="mark svelte-1hs3fqz hasMarker"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz  second">F# 
-						<span class="svelte-1hs3fqz">2</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">G 
-						</span>
-					<span class="mark svelte-1hs3fqz hasMarker"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz   third">G# 
-						<span class="svelte-1hs3fqz">3</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz    fourth">A 
-						<span class="svelte-1hs3fqz">4</span></span>
-					<span class="mark svelte-1hs3fqz hasMarker"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">A# 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz     fifth">B 
-						<span class="svelte-1hs3fqz">5</span></span>
-					<span class="mark svelte-1hs3fqz hasMarker"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">C 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz      sixth">C# 
-						<span class="svelte-1hs3fqz">6</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">D 
-						</span>
-					<span class="mark svelte-1hs3fqz hasMarker"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz       seventh">D# 
-						<span class="svelte-1hs3fqz">7</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz root">E 
-						<span class="svelte-1hs3fqz">1</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">F 
-						</span>
-					<span class="mark svelte-1hs3fqz hasMarker"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz  second">F# 
-						<span class="svelte-1hs3fqz">2</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">G 
-						</span>
-					<span class="mark svelte-1hs3fqz hasMarker"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz   third">G# 
-						<span class="svelte-1hs3fqz">3</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz    fourth">A 
-						<span class="svelte-1hs3fqz">4</span></span>
-					<span class="mark svelte-1hs3fqz hasMarker"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">A# 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz     fifth">B 
-						<span class="svelte-1hs3fqz">5</span></span>
-					<span class="mark svelte-1hs3fqz hasMarker"></span>
-				</span>
-		</div><div class="slot-line"><span class="slot svelte-1hs3fqz zero"><span class="note svelte-1hs3fqz    fourth">A 
-						<span class="svelte-1hs3fqz">4</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">A# 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz     fifth">B 
-						<span class="svelte-1hs3fqz">5</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">C 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz      sixth">C# 
-						<span class="svelte-1hs3fqz">6</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">D 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz       seventh">D# 
-						<span class="svelte-1hs3fqz">7</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz root">E 
-						<span class="svelte-1hs3fqz">1</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">F 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz  second">F# 
-						<span class="svelte-1hs3fqz">2</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">G 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz   third">G# 
-						<span class="svelte-1hs3fqz">3</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz    fourth">A 
-						<span class="svelte-1hs3fqz">4</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">A# 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz     fifth">B 
-						<span class="svelte-1hs3fqz">5</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">C 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz      sixth">C# 
-						<span class="svelte-1hs3fqz">6</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">D 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz       seventh">D# 
-						<span class="svelte-1hs3fqz">7</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz root">E 
-						<span class="svelte-1hs3fqz">1</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">F 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz  second">F# 
-						<span class="svelte-1hs3fqz">2</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span>
-		</div><div class="slot-line"><span class="slot svelte-1hs3fqz zero"><span class="note svelte-1hs3fqz root">E 
-						<span class="svelte-1hs3fqz">1</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">F 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz  second">F# 
-						<span class="svelte-1hs3fqz">2</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">G 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz   third">G# 
-						<span class="svelte-1hs3fqz">3</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz    fourth">A 
-						<span class="svelte-1hs3fqz">4</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">A# 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz     fifth">B 
-						<span class="svelte-1hs3fqz">5</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">C 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz      sixth">C# 
-						<span class="svelte-1hs3fqz">6</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">D 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz       seventh">D# 
-						<span class="svelte-1hs3fqz">7</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz root">E 
-						<span class="svelte-1hs3fqz">1</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">F 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz  second">F# 
-						<span class="svelte-1hs3fqz">2</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">G 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz   third">G# 
-						<span class="svelte-1hs3fqz">3</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz    fourth">A 
-						<span class="svelte-1hs3fqz">4</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">A# 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz     fifth">B 
-						<span class="svelte-1hs3fqz">5</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz">C 
-						</span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span><span class="slot svelte-1hs3fqz"><span class="note svelte-1hs3fqz      sixth">C# 
-						<span class="svelte-1hs3fqz">6</span></span>
-					<span class="mark svelte-1hs3fqz"></span>
-				</span>
-		</div>
-</div></div></div>
+<div class="flex-center svelte-19hvuco"><div class="item-lane svelte-mjen91"><span class="text-span svelte-a9pkzk">Fretboard length:</span>
+		<button class="material-icons mdc-icon-button mdc-icon-button--display-flex" style=""><div class="mdc-icon-button__ripple"></div>
+  remove</button>
+		<span class="text-span svelte-a9pkzk">22</span>
+		<button class="material-icons mdc-icon-button mdc-icon-button--display-flex" style=""><div class="mdc-icon-button__ripple"></div>
+  add</button></div></div></div></div>
 
 
 			
 			<script>
 				{
-					__sveltekit_1t5ec8p = {
+					__sveltekit_1m5a79y = {
 						assets: "/musicapp-svelta",
 						base: new URL(".", location).pathname.slice(0, -1),
 						env: {}
@@ -587,8 +718,8 @@ Fretboard length:
 					const data = [{"type":"data","data":null,"uses":{}},null];
 
 					Promise.all([
-						import("./mondongo/immutable/entry/start.521477d7.js"),
-						import("./mondongo/immutable/entry/app.b522f257.js")
+						import("./mondongo/immutable/entry/start.f7b5de69.js"),
+						import("./mondongo/immutable/entry/app.069156ec.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 2],
